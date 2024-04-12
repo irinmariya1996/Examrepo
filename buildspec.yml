@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
      AWS_DEFAULT_REGION: "us-east-1"
-     IMAGE_REPO_NAME: "irinjoseph"
+     IMAGE_REPO_NAME: "irinrepository"
      IMAGE_TAG: "latest"
      AWS_ACCOUNT_ID: "975050162382"
      DOCKER_PASSWORD: "Mariya@70"
