@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
      AWS_DEFAULT_REGION: "us-east-1"
-     IMAGE_REPO_NAME: "irinrepository"
+     IMAGE_REPO_NAME: "irinrepo"
      IMAGE_TAG: "latest"
      AWS_ACCOUNT_ID: "975050162382"
      DOCKER_PASSWORD: "Mariya@70"
@@ -31,6 +31,6 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
-      - printf '[{"name":"josephexam-container","imageUri":"%s"}]' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"joseph_TD_container","imageUri":"%s"}]' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
